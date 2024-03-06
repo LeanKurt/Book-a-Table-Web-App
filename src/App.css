@@ -1,42 +1,95 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  padding: 0px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+
+}
+
+.navv-bar.open {
+  flex-direction: column;
+  position: absolute;
+  width: 200px;
+}
+
+header .nav-bar ul {
+  list-style-type: none;
+ }
+ 
+ header .nav-bar ul li{
+     position: relative;
+     float: left;
+ }
+ 
+ header .nav-bar ul li {
+   font-size: 20px;
+   padding: 20px;
+   display: block;
+ }
+
+ .logo {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+ }
+
+ .img-inside{
+  object-fit: contain;
+ }
+
+ .nav-btn {
+  color: white;
+  background-color: #495e57;
+  padding:10px 20px 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #495e57;
+ }
+
+ .menu-icon {
+  display: none;
+  cursor: pointer;
+  margin-left: 100px;
+ }
+
+ .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+   margin: 5px 0;
+ }
+
+ @media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the menu icon on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .header .nav-bar {
+    display: none; /* Display the navigation links when the menu is opened */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
