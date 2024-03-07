@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Nav from './sections/Nav';
 import Hero from './sections/Hero';
+import Landingproducts from './sections/Landingproducts';
 
 
 import './App.css'
@@ -11,10 +12,12 @@ function App() {
   return (
     <main>
       <Nav/>
-      <section>
-        <Hero />
+      <section className='section1'>
+       <Hero />
       </section>
-
+      <section className='section1'>
+        <Landingproducts />
+      </section>
     </main>
     
   )
