@@ -1,7 +1,8 @@
 import React from 'react'
-import { landingProducts, deliveryLogo } from '../Constants';
+import { landingProducts, deliveryLogo, myLogo } from '../Constants';
 import '../landing.css';
 const Landingproducts = () => {
+  const logo = deliveryLogo.src;
   return (
      <section className='section1'>
       <div className='heading-container'>
@@ -27,13 +28,17 @@ const Landingproducts = () => {
                   </div>
               </div>
               <div className='product-description'>
-                <p></p>
+                <p className='description'>{product.description}</p>
               </div>
               <div className='bottom'>
                 <div className='action'>
-                  <p>Order a delivery</p>
-                  <img src=''/>
+                  <p className='order'>Order a delivery</p>
                   </div>
+                <div className='logo-container'>
+                  {deliveryLogo.map((logo) => (
+                    <img src={logo.src}  className='logo'alt={logo.alt} width={30} />
+                  ))}
+                </div>
               </div>
             </div>
           ))}
