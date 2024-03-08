@@ -34,9 +34,9 @@ const Landingproducts = () => {
                 <div className='action'>
                   <p className='order'>Order a delivery</p>
                   </div>
-                <div className='logo-container'>
+                <div className='delivery-container'>
                   {deliveryLogo.map((logo) => (
-                    <img src={logo.src}  className='logo'alt={logo.alt} width={30} />
+                    <img src={logo.src}  className='delivery'alt={logo.alt} width={30} />
                   ))}
                 </div>
               </div>

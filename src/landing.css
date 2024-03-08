@@ -97,7 +97,7 @@ h1{
     padding-bottom: 20px;
 }
 
-.logo-container {
+.delivery-container {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -105,7 +105,7 @@ h1{
     height: 30px;
 }
 
-.logo {
+.delivery {
     object-fit: contain;
 }
 
