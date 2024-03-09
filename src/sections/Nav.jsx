@@ -29,8 +29,9 @@ const Nav = () => {
         <li className='nav-item'>About</li>
         <li className='nav-item'>Products</li>
         <li className='nav-item'>Reservation</li>
+        <li className='nav-item'>Login</li>
       </ul>
-      <button className='login-btn'>Login</button>
+     
       </div>
       </div>
     </nav>
