@@ -2,7 +2,6 @@ import React from 'react'
 import { landingProducts, deliveryLogo, myLogo } from '../Constants';
 import '../landing.css';
 const Landingproducts = () => {
-  const logo = deliveryLogo.src;
   return (
      <section className='section1'>
       <div className='heading-container'>
