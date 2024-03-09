@@ -1,0 +1,47 @@
+.section2 {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 200px;
+    height: 50px;
+}
+
+
+.img-inside {
+    object-fit: contain;
+}
+
+.des-container {
+    width: 190px;
+    font-size: 12px;
+    padding-left: 50px;
+}
+
+.links  * {
+    margin: 10px;
+}
+
+.contact * {
+    margin: 10px;
+
+
+}
+
+.social-media  * {
+    margin: 10px;
+}
+
+
+.heading {
+    font-weight: 700;
+}
+
