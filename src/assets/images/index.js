@@ -7,6 +7,7 @@ import landingpic from './landingpic.jpg'
 import date from './date.png'
 import glass from './glass.png'
 import people from './people.png'
+import time from './time.png'
 
 export {
     Littlelemon,
@@ -17,5 +18,6 @@ export {
     landingpic,
     date,
     glass,
-    people
+    people,
+    time
 }
