@@ -165,3 +165,11 @@
     background-color: #495E57;
     color: white;
   }
+
+.nav-item *  {
+    color: black;
+}
+
+.nav-item *:hover {
+    color: white;
+}

@@ -1,9 +1,9 @@
 import React from 'react'
 import { myLogo } from '../Constants';
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
-
 import '../Navbar.css'
+
 
 const Nav = () => {
   const[isOpen, setIsOpen] = useState(false);
@@ -25,11 +25,11 @@ const Nav = () => {
       </div>
       <div className='nav-content'>
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li className='nav-item'>Home</li>
-        <li className='nav-item'>About</li>
-        <li className='nav-item'>Products</li>
-        <li className='nav-item'>Reservation</li>
-        <li className='nav-item'>Login</li>
+        <li className='nav-item'><Link to="/">Home</Link></li>
+        <li className='nav-item'><Link to="/About">About</Link></li>
+        <li className='nav-item'><Link to="/">Menu</Link></li>
+        <li className='nav-item'><Link to="/registration">Registration</Link></li>
+        <li className='nav-item'><Link to="/">Login</Link></li>
       </ul>
      
       </div>
