@@ -7,14 +7,34 @@
     background-color: #495E57;
     color: white;
 }
-
+.reservation {
+    padding-top: 50px;
+}
 input[type = "radio"] {
     margin-left: 20px;
+}
+.indoor {
+    padding-top: 5px;
+    margin-bottom: 13px;
+}
+input[type = "date"] {
+    padding: 25px;
+    border-radius: 5px;
+}
+
+  .dateset.filled {
+    color: white;
+    background-image: linear-gradient(to right, white 0%, white 50%, transparent 50%, transparent 100%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+    background-color: #495E57;
+    transition: background-position 0.6s ease-in-out;
 }
 
 .heading {
     color: #F4CE14;
-    padding-bottom: 20px;
+    padding-top: 27px;
+   
 }
 .registration-container {
     padding-bottom: 50px;

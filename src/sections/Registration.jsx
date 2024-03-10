@@ -6,14 +6,20 @@ import { glass, people, time } from '../assets/images';
 const Registration = () => {
   const [toggle, setToggle] = useState(false);
   const [ toggle2, setToggle2] = useState(false);
-  const [ toggle3, setToggle3] = useState(false)
+  const [ toggle3, setToggle3] = useState(false);
   const [occasion, setOccasion] = useState("Occasion");
+  const [setting, setSetting] = useState("")
+  const [date, setDate] = useState('');
   const [peoples, setPeoples] = useState("No. of Diners");
-  const [ times, setTimes] = useState("Select Time")
+  const [ times, setTimes] = useState("Select Time");
   const [fill, setFill] = useState(false);
   const [fill2, setFill2] = useState(false);
   const [fill3, setFill3] = useState(false);
-  
+  const [fill4, setFill4] = useState(false);
+    const handleDate = (event) => {
+    setDate(event.target.value);
+    setFill4(true);
+  }
 
   const toggleButton = () => {
     setToggle(!toggle);
@@ -54,9 +60,14 @@ const Registration = () => {
           </div>
           <div className='indoor'>
             <label htmlFor='indoor'>Indoor Seating</label>
-            <input type='radio' id='indoor' name='indoor'/>
+            <input type='radio' value="Indoor" onChange={e => setSetting(e.target.value)} id='indoor'  name='indoor'/>
           </div>
-          <p>Occasion</p>
+          <div className='date-container'>
+            <label htmlFor="date">Date</label>
+            <input type='date' name='date' id='date' onChange={handleDate} className={`dateset ${fill4 ? "filled" : ""}`}></input>
+          </div>
+          <div className="reservation-container">
+            <p>Occasion</p>
           <div onClick={toggleButton} className={`button-container ${fill ? "filled" : ""}`}>
             <div className="formlogo-container">
               <img src={glass} className='form-logo' alt="Glass" />
@@ -71,11 +82,12 @@ const Registration = () => {
             <div className='options' onClick={() => handleOption("Anniversary")}><p>Anniversary</p></div>
             <div className='options' onClick={() => handleOption("Wedding")}><p>Wedding</p></div>
           </div>
+          </div>
         </div>
         <div className="reservation2">
         <div className='outdoor'>
             <label htmlFor='Outdoor'>Outdoor Seating</label>
-            <input type='radio' id='outdoor' name='outdoor'/>
+            <input type='radio' id='outdoor' name='outdoor' value="Outdoor" onChange={e => setSetting(e.target.value)}/>
           </div>
           <div className='reservation-container'>
           <p>Number of Diners</p>
