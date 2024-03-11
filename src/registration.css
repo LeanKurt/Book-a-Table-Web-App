@@ -1,5 +1,6 @@
 .registration-form {
     display: flex;
+    padding-top: 100px;
     width: 100%;
     height: 100vh;
     justify-content: center;
@@ -10,16 +11,32 @@
 .reservation {
     padding-top: 50px;
 }
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
 input[type = "radio"] {
     margin-left: 20px;
 }
+
+
 .indoor {
     padding-top: 5px;
     margin-bottom: 13px;
 }
 input[type = "date"] {
     padding: 25px;
+    cursor: pointer;
     border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.389); 
+
 }
 
   .dateset.filled {
@@ -84,7 +101,12 @@ input[type = "date"] {
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.389); /* Add box shadow */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.389); 
+
+}
+
+.occa {
+    margin-top: 15px;
 }
 
 .occassion {
@@ -164,6 +186,7 @@ input[type = "date"] {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.389);
+    margin-bottom: 15px;
 }
 
 .button-container2.filled {
@@ -190,6 +213,7 @@ input[type = "date"] {
 .people-option {
     border: 1px solid black;
     padding: 10px 39px 10px 39px;
+    cursor: pointer;
 }
 
 .column-container.open {
@@ -226,3 +250,13 @@ input[type = "date"] {
     border: 1px solid black;
     padding: 10px 39px 10px 32px;
 }
+
+
+.submit-container {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+

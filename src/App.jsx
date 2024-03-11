@@ -4,9 +4,9 @@ import Nav from './sections/Nav';
 import Hero from './sections/Hero';
 import Landingproducts from './sections/Landingproducts';
 import Footer from './sections/Footer';
-import Registration from './sections/Registration';
 import About from './sections/About';
 import './App.css';
+import Reservation from './sections/Reservation';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           }/>
           <Route path="/registration" element ={
             <section className='section1'>
-              <Registration />
+              <Reservation />
             </section>
           }/>
         </Routes>

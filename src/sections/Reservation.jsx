@@ -3,7 +3,7 @@ import { useState } from 'react'
 import '../registration.css'
 import { glass, people, time } from '../assets/images';
 
-const Registration = () => {
+const Reservation = () => {
   const [toggle, setToggle] = useState(false);
   const [ toggle2, setToggle2] = useState(false);
   const [ toggle3, setToggle3] = useState(false);
@@ -16,11 +16,15 @@ const Registration = () => {
   const [fill2, setFill2] = useState(false);
   const [fill3, setFill3] = useState(false);
   const [fill4, setFill4] = useState(false);
+  const [submit , setSubmit] = useState(true);
     const handleDate = (event) => {
     setDate(event.target.value);
     setFill4(true);
   }
-
+ 
+  const handleRadio = (event) => {
+       setSetting(event.target.value);
+  }
   const toggleButton = () => {
     setToggle(!toggle);
   };
@@ -35,24 +39,45 @@ const Registration = () => {
 
   const handleOption = (value) => {
     setOccasion(value);
-    setToggle(false)
-    setFill(true)
-  }
+    setToggle(false);
+    setFill(true);
+  };
 
   const handlePeople = (value) => {
      setPeoples(value)
      setToggle2(false)
      setFill2(true)
-  }
+  };
 
   const handleTime = (value) => {
     setTimes(value);
     setToggle3(false);
     setFill3(true);
+  };
+
+  const handleSubmit = () => {
+    e.preventDefault();
+  }
+
+
+  const ErrorMessage = () => {
+    return(
+      <div>
+        <p className='error'> *Please fill in all required field</p>
+      </div>
+   
+    )
+  }
+
+  const validateInput = () => {
+    return (
+      date !== '' && occasion !== 'Occasion' && peoples !== 'No. of Diners' && times !== 'Select Time' && setting !== ''
+    );
   }
 
   return (
     <section className='registration-form'>
+      <form onSubmit={handleSubmit}>
       <div className='registration-container'>
         <div className="reservation">
           <div className="heading">
@@ -60,14 +85,14 @@ const Registration = () => {
           </div>
           <div className='indoor'>
             <label htmlFor='indoor'>Indoor Seating</label>
-            <input type='radio' value="Indoor" onChange={e => setSetting(e.target.value)} id='indoor'  name='indoor'/>
+            <input type='radio' value="Indoor" onChange={handleRadio}  checked={setting === "Indoor"} disabled={setting === "Outdoor"}id='indoor'  name='indoor'/>
           </div>
           <div className='date-container'>
             <label htmlFor="date">Date</label>
             <input type='date' name='date' id='date' onChange={handleDate} className={`dateset ${fill4 ? "filled" : ""}`}></input>
           </div>
           <div className="reservation-container">
-            <p>Occasion</p>
+            <p className='occa'>Occasion</p>
           <div onClick={toggleButton} className={`button-container ${fill ? "filled" : ""}`}>
             <div className="formlogo-container">
               <img src={glass} className='form-logo' alt="Glass" />
@@ -77,6 +102,7 @@ const Registration = () => {
             </div>
             <div className='chevron'><p>{toggle ? "^" : "v"}</p></div>
           </div>
+          
           <div className={`option-container ${toggle ? "open" : ""}`}>
             <div className='options' onClick={() => handleOption("Birthday")}><p>Birthday</p></div>
             <div className='options' onClick={() => handleOption("Anniversary")}><p>Anniversary</p></div>
@@ -87,7 +113,7 @@ const Registration = () => {
         <div className="reservation2">
         <div className='outdoor'>
             <label htmlFor='Outdoor'>Outdoor Seating</label>
-            <input type='radio' id='outdoor' name='outdoor' value="Outdoor" onChange={e => setSetting(e.target.value)}/>
+            <input type='radio' id='outdoor' name='outdoor'   value = "Outdoor" checked={setting === "Outdoor"} disabled ={setting === "Indoor"}onChange={handleOption}/>
           </div>
           <div className='reservation-container'>
           <p>Number of Diners</p>
@@ -145,12 +171,18 @@ const Registration = () => {
             </div>
           </div>
           </div>
-
-
         </div>
       </div>
+      <div className='submit-container'>
+        <button className='booking-button' disabled={!validateInput()}>Reserve a Table</button> 
+        {!validateInput() ? (
+            <ErrorMessage /> 
+           ) : null}
+      </div>
+      
+      </form>
     </section>
   )
 }
 
-export default Registration
+export default Reservation

@@ -1,5 +1,6 @@
 import React from 'react'
 import { myLogo } from '../Constants';
+import { Littlelemon } from '../assets/images';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../Navbar.css'
@@ -13,9 +14,9 @@ const Nav = () => {
   return (
     <nav className={`navbar ${isOpen ? "open" : ''}`}>
       <div className='logo-container'>
-           {myLogo.map((image) => (
-            <img src={image.src} className='img-inside' alt={image.alt} height={49} width={200}/>
-           ))}
+         
+            <img src={Littlelemon} className='img-inside' alt="Little Lemon" height={49} width={200}/>
+
         </div>
       <div className='nav-container'>
       <div className="menu-icon" onClick={toggleNavBar}>
@@ -28,7 +29,7 @@ const Nav = () => {
         <li className='nav-item'><Link to="/">Home</Link></li>
         <li className='nav-item'><Link to="/About">About</Link></li>
         <li className='nav-item'><Link to="/">Menu</Link></li>
-        <li className='nav-item'><Link to="/registration">Registration</Link></li>
+        <li className='nav-item'><Link to="/registration">Reservation</Link></li>
         <li className='nav-item'><Link to="/">Login</Link></li>
       </ul>
      

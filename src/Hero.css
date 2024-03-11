@@ -51,15 +51,29 @@
     color: #F4CE14;
 }
 
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
 .booking-button {
         padding: 8px 20px 8px 20px;
         font-weight: 700;
         color: #333333;
         background-color: #F4CE14;
-        border: 1px solid #F4CE14;
+        border: 1px solid #F4CE14;   
         margin-top: 5px;
         border-radius: 5px;
-    
+       cursor: pointer;
+       background-image: linear-gradient(to right, #F4CE14 0%, #F4CE14 50%, transparent 50%, transparent 100%);
+       background-size: 200% 100%;
+       transition: background-position 0.6s ease-in-out;
+}
+
+.booking-button:hover {
+    background-position: -100% 0;
+   background-color: #495E57;
+   color: white;
 }
 
 @media only screen and (max-width: 576px) {

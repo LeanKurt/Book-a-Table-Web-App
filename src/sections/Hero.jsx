@@ -1,5 +1,6 @@
 import React from 'react'
 import { landingpic } from '../assets/images'; 
+import { Link } from 'react-router-dom';
 import '../Hero.css';
 
 const Hero = () => {
@@ -17,7 +18,7 @@ const Hero = () => {
                <p>We are a family owned Meditterenean restaurant, focused on traditional recipe served with a modern twist</p>
            </div>
            <div className='btn-container'>
-              <button className='booking-button'>Reserve a Table</button>
+              <Link to ="/registration"><button className='booking-button'>Reserve a Table</button></Link>
            </div>
         </div>
         <div className="image-container">
