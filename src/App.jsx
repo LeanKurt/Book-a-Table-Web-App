@@ -1,14 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Nav from './sections/Nav';
 import Hero from './sections/Hero';
 import Landingproducts from './sections/Landingproducts';
 import Footer from './sections/Footer';
 import About from './sections/About';
 import './App.css';
-import Reservation from './sections/Reservation';
+import Booking from './sections/Booking';
+import ConfirmedBooking from './sections/ConfirmedBooking';
+import { useState } from 'react';
 
 function App() {
+  const [date, setDate] = useState("");
+  const [setting, setSetting] = useState("");
+  const [peoples, setPeoples] = useState("No. of Diners");
+  const [times, setTimes] = useState("Select Time");
+ 
   return (
     <main>
       <Router>
@@ -31,9 +39,15 @@ function App() {
           }/>
           <Route path="/registration" element ={
             <section className='section1'>
-              <Reservation />
+              <Booking />
             </section>
           }/>
+          <Route path="/confirmed" element= {
+            <section className='section1'>
+              <ConfirmedBooking />
+            </section>
+          }/>
+         
         </Routes>
       </Router>
       <Footer />

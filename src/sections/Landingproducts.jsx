@@ -1,5 +1,5 @@
 import React from 'react'
-import { landingProducts, deliveryLogo, myLogo } from '../Constants';
+import { landingProducts, deliveryLogo } from '../Constants';
 import '../landing.css';
 const Landingproducts = () => {
   return (
@@ -13,10 +13,10 @@ const Landingproducts = () => {
         </div>
         </div>
         <div className='products-container'>
-          {landingProducts.map((product) => (
+          {landingProducts.map((product , index) => (
             <div className='card-container'>
               <div className='img-container'>
-                <img src={product.src} className='img-product' width={195}/>
+                <img  key = {index}src={product.src} className='img-product' width={195}/>
               </div>
               <div className='product-title'>
                 <div className='name'>

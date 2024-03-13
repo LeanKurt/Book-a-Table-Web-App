@@ -1,8 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Reservation from './Reservation';
+import { useReducer } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import '../registration.css';
+ 
 const Booking = () => {
+
+
+      
   return (
-    <div>Booking</div>
+     <section className='booking-form'>
+       <Reservation/>
+     </section>
   )
 }
 
