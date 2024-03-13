@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../registration.css'
 import { glass, people, time } from '../assets/images';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Reservation = () => {
@@ -20,6 +20,7 @@ const Reservation = () => {
   const [fill2, setFill2] = useState(false);
   const [fill3, setFill3] = useState(false);
   const [fill4, setFill4] = useState(false);
+  const navigate = useNavigate();
  
   const handleDate = (event) => {
     setDate(event.target.value);
@@ -58,10 +59,13 @@ const Reservation = () => {
     setToggle3(false);
     setFill3(true);
   };
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Reservation completed");
+    if( date !== '' && occasion !== 'Occasion' && peoples !== 'No. of Diners' && times !== 'Select Time' && setting !== '') {
+      navigate('/confirmed');
+      alert("Thank you for booking");
+    }
   }
 
 
@@ -174,7 +178,7 @@ const Reservation = () => {
           </div>
         </div>
         <div className='submit-container'>
-         <Link to="/confirmed"> <button type="submit" className='booking-button' disabled={!validateInput()}>Reserve a Table</button></Link>
+         <button type="submit" className='booking-button' disabled={!validateInput()}>Reserve a Table</button>
           {!validateInput() ? (
             <ErrorMessage />
           ) : null}
