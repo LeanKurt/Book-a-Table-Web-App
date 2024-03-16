@@ -9,7 +9,7 @@ const MyContext = ({children}) => {
   const [peoples, setPeoples] = useState("No. of Diners");
   const [times, setTimes] = useState("Select Time");
   return (
-    <TableData.Provider value={{occasion,setOccasion,setting,setSetting,
+    <TableData.Provider value={{occasion, setOccasion,setting,setSetting,
     date, setDate, peoples, setPeoples, times, setTimes}}>
         {children}
     </TableData.Provider>

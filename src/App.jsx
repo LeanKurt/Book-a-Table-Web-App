@@ -10,12 +10,10 @@ import './App.css';
 import Booking from './sections/Booking';
 import ConfirmedBooking from './sections/ConfirmedBooking';
 import { useState } from 'react';
+import MyContext from './sections/MyContext';
 
 function App() {
-  const [date, setDate] = useState("");
-  const [setting, setSetting] = useState("");
-  const [peoples, setPeoples] = useState("No. of Diners");
-  const [times, setTimes] = useState("Select Time");
+
  
   return (
     <main>
@@ -39,19 +37,25 @@ function App() {
           }/>
           <Route path="/registration" element ={
             <section className='section1'>
+
               <Booking />
+             
             </section>
           }/>
           <Route path="/confirmed" element= {
             <section className='section1'>
+    
               <ConfirmedBooking />
+          
             </section>
           }/>
+        
          
         </Routes>
       </Router>
       <Footer />
     </main>
+   
   );
 }
 
