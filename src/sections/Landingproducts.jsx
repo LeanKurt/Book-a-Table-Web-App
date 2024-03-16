@@ -16,7 +16,7 @@ const Landingproducts = () => {
           {landingProducts.map((product , index) => (
             <div className='card-container'>
               <div className='img-container'>
-                <img  key = {index}src={product.src} className='img-product' width={195}/>
+                <img key = {index}src={product.src} className='img-product' width={195}/>
               </div>
               <div className='product-title'>
                 <div className='name'>

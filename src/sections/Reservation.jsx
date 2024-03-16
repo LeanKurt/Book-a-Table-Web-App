@@ -88,6 +88,7 @@ const Reservation = () => {
     <section className='registration-form'>
       <form onSubmit={handleSubmit}>
         <div className='registration-container'>
+          <div className='row1'>
           <div className="reservation">
             <div className="heading">
               <h1>Reservation</h1>
@@ -176,12 +177,13 @@ const Reservation = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className='submit-container'>
-         <button type="submit" className='booking-button' disabled={!validateInput()}>Reserve a Table</button>
+          </div>
+          <div className='submit-container'>
+         <button type="submit" className={!validateInput() ? "disabled" : "booking-button"} disabled={!validateInput()}>Reserve a Table</button>
           {!validateInput() ? (
             <ErrorMessage />
           ) : null}
+        </div>
         </div>
       </form>
     </section>

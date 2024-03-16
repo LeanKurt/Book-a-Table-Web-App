@@ -10,12 +10,13 @@ import './App.css';
 import Booking from './sections/Booking';
 import ConfirmedBooking from './sections/ConfirmedBooking';
 import { useState } from 'react';
-import MyContext from './sections/MyContext';
+import { MyContextProvider } from './sections/MyContext';
 
 function App() {
 
  
   return (
+    <MyContextProvider>
     <main>
       <Router>
         <Nav />
@@ -55,6 +56,7 @@ function App() {
       </Router>
       <Footer />
     </main>
+    </MyContextProvider>
    
   );
 }

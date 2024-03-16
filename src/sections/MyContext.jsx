@@ -1,19 +1,19 @@
-import React, { createContext } from 'react'
-import { useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-const TableData = createContext();
-const MyContext = ({children}) => {
-  const [occasion, setOccasion] = useState("Occasion");
-  const [setting, setSetting] = useState("")
+const MyContext = createContext();
+
+const MyContextProvider = ({ children }) => {
   const [date, setDate] = useState("");
+  const [setting, setSetting] = useState("");
   const [peoples, setPeoples] = useState("No. of Diners");
   const [times, setTimes] = useState("Select Time");
-  return (
-    <TableData.Provider value={{occasion, setOccasion,setting,setSetting,
-    date, setDate, peoples, setPeoples, times, setTimes}}>
-        {children}
-    </TableData.Provider>
-  )
-}
 
-export default {MyContext, TableData}
+  return (
+    <MyContext.Provider value={{ date, setDate, setting, setSetting, peoples, setPeoples, times, setTimes }}>
+      {children}
+    </MyContext.Provider>
+  );
+};
+
+
+export { MyContext, MyContextProvider };
