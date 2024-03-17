@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={
              <>
-             <section className='section1'>
+             <section className='hero'>
                <Hero />
              </section>
              <section className='section1'>
