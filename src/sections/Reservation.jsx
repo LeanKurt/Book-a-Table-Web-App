@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
-import '../registration.css'
+import { useState, useContext } from 'react'
+import { MyContext } from './MyContext';
 import { glass, people, time } from '../assets/images';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -11,11 +11,7 @@ const Reservation = () => {
   const [toggle, setToggle] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
-  const [occasion, setOccasion] = useState("Occasion");
-  const [setting, setSetting] = useState("")
-  const [date, setDate] = useState("");
-  const [peoples, setPeoples] = useState("No. of Diners");
-  const [times, setTimes] = useState("Select Time");
+  const { date, setDate, setting, setSetting, peoples, setPeoples,times , setTimes } = useContext(MyContext);
   const [fill, setFill] = useState(false);
   const [fill2, setFill2] = useState(false);
   const [fill3, setFill3] = useState(false);

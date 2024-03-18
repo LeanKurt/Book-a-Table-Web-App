@@ -4,12 +4,12 @@ const MyContext = createContext();
 
 const MyContextProvider = ({ children }) => {
   const [date, setDate] = useState("");
-  const [setting, setSetting] = useState("");
+  const [occasion, setOccasion] = useState("Occasion");
   const [peoples, setPeoples] = useState("No. of Diners");
   const [times, setTimes] = useState("Select Time");
 
   return (
-    <MyContext.Provider value={{ date, setDate, setting, setSetting, peoples, setPeoples, times, setTimes }}>
+    <MyContext.Provider value={{ date, setDate, occasion, setSetting, peoples, setPeoples, times, setTimes }}>
       {children}
     </MyContext.Provider>
   );
