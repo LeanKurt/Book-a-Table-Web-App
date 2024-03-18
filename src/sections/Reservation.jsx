@@ -11,7 +11,7 @@ const Reservation = () => {
   const [toggle, setToggle] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
-  const { date, setDate, setting, setSetting, peoples, setPeoples,times , setTimes } = useContext(MyContext);
+  const { date, setDate, occasion, setOccasion, peoples, setPeoples,times , setTimes, setting , setSetting } = useContext(MyContext);
   const [fill, setFill] = useState(false);
   const [fill2, setFill2] = useState(false);
   const [fill3, setFill3] = useState(false);
