@@ -13,9 +13,9 @@ const ConfirmedBooking = () => {
   return (
     <section className='confirmed'>
       <div>
-        <h1>Booking has been confirmed</h1>
+        <h1>Reservation has been confirmed</h1>
       </div>
-      <button  onClick ={checkBooking}className='booking-button'>Check your Booking  -&gt;</button>
+      <button  onClick ={checkBooking}className='booking-button'>Check your Reservation  -&gt;</button>
 
     
     </section>
