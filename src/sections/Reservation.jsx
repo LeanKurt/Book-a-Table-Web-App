@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { MyContext } from './MyContext';
 import { glass, people, time } from '../assets/images';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Reservation = () => {
