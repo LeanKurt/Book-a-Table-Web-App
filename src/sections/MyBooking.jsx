@@ -1,11 +1,13 @@
 import React from 'react'
 import { MyContext } from './MyContext';
+import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import '../Mybooking.css'
 
 
 const MyBooking = () => {
-    const { date, setDate, occasion, setOccasion, peoples, setPeoples, times, setTimes, setting, setSetting } = useContext(MyContext);
+    const { date,  occasion,  peoples,  times,  setting,  } = useContext(MyContext);
+    const currentDate = () => {
         let newDate = new Date();
         let year = newDate.getFullYear();
         let currentMonth = newDate.getMonth() + 1;
@@ -13,12 +15,19 @@ const MyBooking = () => {
         let formattedYear = year.toString();
         let formattedMonth = currentMonth < 10 ? `0${currentMonth}` : currentMonth.toString();
         let formattedDay = currentDay < 10 ? `0${currentDay}` : currentDay.toString();
-        let dateToday = formattedYear + "-" + formattedMonth + "-" + formattedDay; 
+        let dateToday = formattedYear + "-" + formattedMonth + "-" + formattedDay;
+        return dateToday; 
+    }
+    const navigate = useNavigate();
+    const backToBooking = () => {
+        
+        navigate('/');
+    }
     return (
         <section className='confirmed'>
             <div className='card-container'>
                 <div className="booking-date">
-                    <h1>Your Booking was made on {dateToday}</h1>
+                    <h1>Your Booking was made on {currentDate()}</h1>
                 </div>
                 <div className="container-all">
                <div className='container-1'>
@@ -46,6 +55,8 @@ const MyBooking = () => {
                </div>
 
             </div>
+
+            <button onClick={backToBooking}className='booking-button'>Go Back?</button>
         </section>
         
     )
