@@ -118,7 +118,7 @@ const Reservation = () => {
           <div className="reservation2">
             <div className='outdoor'>
               <label htmlFor='Outdoor'>Outdoor Seating</label>
-              <input type='radio' id='outdoor' name='outdoor' value="Outdoor" checked={setting === "Outdoor"} disabled={setting === "Indoor"} onChange={handleOption} />
+              <input type='radio' id='outdoor' name='outdoor' value="Outdoor" checked={setting === "Outdoor"} disabled={setting === "Indoor"} onChange={handleRadio} />
             </div>
             <div className='reservation-container'>
               <p>Number of Diners</p>

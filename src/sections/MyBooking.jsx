@@ -23,7 +23,7 @@ const MyBooking = () => {
                 <div className="container-all">
                <div className='container-1'>
                 <div className="setting-container">
-                    <p>Date : {date}</p>
+                    <p>Date: {date}</p>
                     <p>Setting: {setting}</p>
 
                 </div>
@@ -35,11 +35,11 @@ const MyBooking = () => {
                </div>
                <div className="container-2">
                 <div className="no-people">
-                    <p>No. of people : {peoples}</p>
+                    <p>No. of people: {peoples}</p>
 
                 </div>
                 <div className="time-container">
-                    <p>Time : {times}</p>
+                    <p>Time: {times}</p>
 
                 </div>
                </div>
