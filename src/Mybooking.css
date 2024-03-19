@@ -10,3 +10,9 @@
     margin-right: 20px;
     padding-top: 16px;
 }
+
+.card-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.393);
+    border-radius: 10px;
+    padding: 50px;
+}
