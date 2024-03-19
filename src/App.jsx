@@ -9,6 +9,7 @@ import About from './sections/About';
 import './App.css';
 import Booking from './sections/Booking';
 import ConfirmedBooking from './sections/ConfirmedBooking';
+import MyBooking from './sections/MyBooking';
 import { useState } from 'react';
 import { MyContextProvider } from './sections/MyContext';
 
@@ -50,9 +51,14 @@ function App() {
           
             </section>
           }/>
-        
-         
+          <Route path='/mybooking' element = {
+          <section className='section1'>
+            <MyBooking />
+          </section>
+        }/>
         </Routes>
+        
+
       </Router>
       <Footer />
     </main>
