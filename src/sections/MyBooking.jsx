@@ -14,9 +14,29 @@ const MyBooking = () => {
         let formattedDay = currentDay < 10 ? `0${currentDay}` : currentDay.toString();
         let dateToday = formattedYear + "-" + formattedMonth + "-" + formattedDay; 
     return (
-        <div>
-            <p>The date today: {dateToday}</p>
-        </div>
+        <section className='confirmed'>
+            <div className='card-container'>
+               <div className='container-1'>
+                <div className="setting-container">
+
+                </div>
+                <div className="occasion-container">
+
+                </div>
+
+               </div>
+               <div className="container-2">
+                <div className="no-people">
+
+                </div>
+                <div className="time-container">
+                    
+                </div>
+               </div>
+
+            </div>
+        </section>
+        
     )
 }
 
