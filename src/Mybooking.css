@@ -11,9 +11,10 @@
     padding-top: 16px;
 }
 
-.card-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.393);
+.mybooking-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.212);
     border-radius: 10px;
+    background-color: #EDEFEE;
     padding: 50px;
     margin-bottom: 20px;
 }

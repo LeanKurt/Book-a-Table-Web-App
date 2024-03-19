@@ -25,7 +25,7 @@ const MyBooking = () => {
     }
     return (
         <section className='confirmed'>
-            <div className='card-container'>
+            <div className='mybooking-container'>
                 <div className="booking-date">
                     <h1>Your Booking was made on {currentDate()}</h1>
                 </div>
