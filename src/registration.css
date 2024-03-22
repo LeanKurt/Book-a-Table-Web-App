@@ -45,7 +45,7 @@ input[type = "radio"] {
 
 .indoor {
     padding-top: 5px;
-    margin-bottom: 13px;
+    margin: 10px;
 }
 input[type = "date"] {
     padding: 25px;
@@ -101,7 +101,7 @@ input[type = "date"] {
 
 .reservation2 {
     margin-left: 180px;
-    padding-top: 120px;
+    padding-top: 50px;
 }
 
 
@@ -348,3 +348,17 @@ input[type = "date"] {
     
  }
 
+.radio-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+}
+
+.first-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 130px;
+}
