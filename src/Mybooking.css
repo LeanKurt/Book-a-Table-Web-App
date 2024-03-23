@@ -18,3 +18,32 @@
     padding: 50px;
     margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+   .mybooking-container {
+    width: 90%;
+    height: 40%;
+   }
+
+   .booking-date * {
+    font-size: 80%;
+   }
+   .setting-container {
+    font-size: 80%;
+   }
+   .occasion-container {
+    font-size: 80%;
+   }
+
+   .no-people {
+    font-size: 80%;
+   }
+
+   .time-container {
+    font-size: 80%;
+   }
+}
+
+.confirmed {
+    margin-top: 50px;
+}
