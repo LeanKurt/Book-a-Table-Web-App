@@ -26,11 +26,11 @@ const Nav = () => {
       </div>
       <div className='nav-content'>
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li className='nav-item'><Link to="/">Home</Link></li>
+        <li className='nav-item'><Link to="/home">Home</Link></li>
         <li className='nav-item'><Link to="/About">About</Link></li>
-        <li className='nav-item'><Link to="/">Menu</Link></li>
+        <li className='nav-item'><Link to="/menu">Menu</Link></li>
         <li className='nav-item'><Link to="/registration">Reservation</Link></li>
-        <li className='nav-item'><Link to="/">Login</Link></li>
+        <li className='nav-item'><Link to="/login">Login</Link></li>
       </ul>
      
       </div>

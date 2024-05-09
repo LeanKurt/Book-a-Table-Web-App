@@ -1,0 +1,96 @@
+
+.login-container {
+    color: black;
+    width: 500px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.212);
+  }
+ .login-h2 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px;
+  }
+  .login-label{
+    color: black;
+
+  }
+  .login-link {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  
+ .login-input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center ;
+  }
+  
+  .button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  
+.login-link {
+  padding-top: 10px;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-button{
+    padding: 8px 20px 8px 20px;
+    font-weight: 700;
+    color: #333333;
+    background-color: #F4CE14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F4CE14;   
+    margin-top: 20px;
+    border-radius: 5px;
+   cursor: pointer;
+   background-image: linear-gradient(to right, #F4CE14 0%, #F4CE14 50%, transparent 50%, transparent 100%);
+   background-size: 200% 100%;
+   transition: background-position 0.6s ease-in-out;
+}
+
+.login-button:hover{
+background-position: -100% 0;
+background-color: #495E57;
+color: white;
+}

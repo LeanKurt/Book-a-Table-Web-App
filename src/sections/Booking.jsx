@@ -1,7 +1,5 @@
 import React from 'react';
 import Reservation from './Reservation';
-import { useReducer } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import '../registration.css';
  

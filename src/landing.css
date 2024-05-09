@@ -25,7 +25,19 @@ h1{
     border-radius: 5px;
     margin-left: 150px;
     margin-bottom: 20px;
+    background-image: linear-gradient(to right, #F4CE14 0%, #F4CE14 50%, transparent 50%, transparent 100%);
+    background-size: 200% 100%;
+    transition: background-position 0.6s ease-in-out;
 }
+
+.order-btn:hover {
+ background-position: -100% 0;
+background-color: #495E57;
+color: white;
+cursor: pointer;
+}
+
+
 
 .products-container {
     display: flex;

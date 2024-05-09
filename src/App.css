@@ -1,0 +1,26 @@
+.menu-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.login-section {
+    background-image: url("C:\Users\LEAN\Desktop\Booking system\Booking-system\src\assets\images\loginbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(106%) contrast(90%);
+    padding-top: 50px;
+    height: 100vh; 
+}
+
+.signup-section {
+    background-image: url("C:\Users\LEAN\Desktop\Booking system\Booking-system\src\assets\images\loginbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(106%) contrast(90%);
+    padding-top: 50px;
+    height: 100vh; 
+}

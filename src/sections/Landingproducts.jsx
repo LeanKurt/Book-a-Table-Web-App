@@ -1,7 +1,12 @@
 import React from 'react'
 import { landingProducts, deliveryLogo } from '../Constants';
+import { useNavigate } from 'react-router-dom';
 import '../landing.css';
 const Landingproducts = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+         navigate('/menu');
+    }
   return (
      <section className='section1'>
       <div className='heading-container'>
@@ -9,7 +14,7 @@ const Landingproducts = () => {
             <h1>This weeks specials!</h1>
         </div>
         <div className='order-button'>
-           <button className='order-btn'>Online Menu</button>
+           <button className='order-btn'onClick={handleClick}>Online Menu</button>
         </div>
         </div>
         <div className='products-container'>

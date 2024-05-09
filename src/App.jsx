@@ -10,8 +10,11 @@ import './App.css';
 import Booking from './sections/Booking';
 import ConfirmedBooking from './sections/ConfirmedBooking';
 import MyBooking from './sections/MyBooking';
-import { useState } from 'react';
+import Iloveyou from './sections/Iloveyou';
+import Menu from './sections/Menu';
+import Signup from './sections/Signup';
 import { MyContextProvider } from './sections/MyContext';
+import Login from './sections/Login';
 
 function App() {
 
@@ -22,7 +25,7 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" element={
+          <Route path="/home" element={
              <>
              <section className='hero'>
                <Hero />
@@ -51,11 +54,33 @@ function App() {
           
             </section>
           }/>
+           <Route path="/menu" element= {
+            <section className='menu-section'>
+    
+              <Menu />
+          
+            </section>
+          }/>
           <Route path='/mybooking' element = {
           <section className='section1'>
             <MyBooking />
           </section>
         }/>
+           <Route path='/signup' element = {
+          <section className='signup-section'>
+            <Signup />
+          </section>
+        }/>
+         <Route path='/love' element = {
+          <section className='section1'>
+            <Iloveyou />
+          </section>
+         }/>
+         <Route path='/login' element = {
+            <section className='login-section'>
+              <Login />
+            </section>
+          }/>
         </Routes>
         
 

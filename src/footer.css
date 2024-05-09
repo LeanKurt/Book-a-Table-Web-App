@@ -35,7 +35,9 @@
 
 
 }
-
+.brand {
+    margin-top: 20px;
+}
 .social-media  * {
     margin: 10px;
 }

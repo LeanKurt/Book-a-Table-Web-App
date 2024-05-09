@@ -49,7 +49,6 @@ const MyBooking = () => {
                 </div>
                 <div className="time-container">
                     <p>Time: {times}</p>
-
                 </div>
                </div>
                </div>

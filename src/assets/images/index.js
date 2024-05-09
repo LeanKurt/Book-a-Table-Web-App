@@ -8,6 +8,14 @@ import date from './date.png'
 import glass from './glass.png'
 import people from './people.png'
 import time from './time.png'
+import chef from './chef.jpg'
+import panna from './panna.jpg'
+import polenta from './polenta.jpg'
+import ravioli from './ravioli.jpg'
+import saltim from './saltimbocca.jpg'
+import cacciucco from './cacciucco.jpg'
+import carpaccio from './carpaccio.jpg'
+import loginbackground from './loginbackground.jpg'
 
 export {
     Littlelemon,
@@ -19,5 +27,13 @@ export {
     date,
     glass,
     people,
-    time
+    time,
+    chef,
+    panna,
+    polenta,
+    ravioli,
+    saltim,
+    cacciucco,
+    carpaccio,
+    loginbackground
 }
